@@ -46,7 +46,7 @@ module.exports.Signup = async (req, res) => {
             Math.random().toString(36).substring(2, 15) +
             Math.random().toString(36).substring(2, 15);
 
-        const link = `https://gregarious-narwhal-772a00.netlify.app/UrlShortener/account_activation/${randomString}`;
+        const link = `https://url-shortener-frontend-three.vercel.app/${randomString}`;
 
         const sub = "Account Activation"
 
@@ -137,7 +137,7 @@ module.exports.PasswordResetLink = async (req, res) => {
         await User.findByIdAndUpdate(matchedUser.id, matchedUser);
 
         //sending email for resetting
-        const link = `https://gregarious-narwhal-772a00.netlify.app/UrlShortener/UpdatePassword/${randomString}`;
+        const link = `https://url-shortener-frontend-three.vercel.app/${randomString}`;
 
         const sub = "Reset password"
 
