@@ -23,9 +23,9 @@ const userSchema=new mongoose.Schema({
     token_reset_password:{
         type:String
     },
-    urlshortener:{
+    // urlshortener:{
         
-    }
+    // }
 })
 
 module.exports=mongoose.model('user',userSchema);

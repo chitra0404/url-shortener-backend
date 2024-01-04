@@ -8,12 +8,13 @@ const Secret_Key = process.env.SECRET_KEY
 
 module.exports.getUser = async (req, res) => {
     const user = await User.find();
+    console.log("user",user);
     res.send(user);
 }
 
 module.exports.getUserRestrictData = async (req, res) => {
     const user = await User.find({}, 'name email account_activated');
-    res.send("<h1>Welcome To URL SHORTENER Application</h1>");
+    res.send("hi");
 }
 
 module.exports.Signup = async (req, res) => {
