@@ -28,12 +28,12 @@ module.exports.NodeMailer= async (token,User_mail,link,res,sub)=>{
 
     const sendMail = async () => {
         const info = await transporter.sendMail({
-          from: `"chitra" <${Email_Id}>`,
+          from: Email_Id,
           to: User_mail,
           subject: `Url Shortener ${sub} link`,
           text: link
         });
-        console.log(`Mail set to ${info.messageId}`);
+        console.log(`Mail set to ${User_mail}`);
         return;
     };
 

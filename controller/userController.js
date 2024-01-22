@@ -46,11 +46,12 @@ module.exports.Signup = async (req, res) => {
             Math.random().toString(36).substring(2, 15) +
             Math.random().toString(36).substring(2, 15);
 
-        const link = `https://url-shortener-frontend-three.vercel.app/${randomString}`;
+        const link = `http://localhost:5173/UrlShortener/account_activation/${randomString}`;
 
         const sub = "Account Activation"
 
         NodeMailer(randomString, email, link, res, sub);
+        console.log(NodeMailer);
     }
     catch (err) {
         console.error('Error signing up user', err);
